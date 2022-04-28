@@ -1,7 +1,7 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <id>com.github.pluralrocket.intellijpluginmk1</id>
-    <name>intellij-plugin-mk1</name>
+    <name>Mk1</name>
     <vendor>pluralrocket</vendor>
 
     <depends>com.intellij.modules.platform</depends>
@@ -15,4 +15,21 @@
         <listener class="com.github.pluralrocket.intellijpluginmk1.listeners.MyProjectManagerListener"
                   topic="com.intellij.openapi.project.ProjectManagerListener"/>
     </applicationListeners>
+    <actions>
+        <action id="com.github.pluralrocket.intellijpluginmk1.actions.NewNote"
+                class="com.github.pluralrocket.intellijpluginmk1.actions.NewNote" text="NewNote"
+                description="Create new note file">
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+        </action>
+        <action id="com.github.pluralrocket.intellijpluginmk1.actions.OpenNote"
+                class="com.github.pluralrocket.intellijpluginmk1.actions.OpenNote" text="OpenNote"
+                description="Open an existing note">
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+        </action>
+        <action id="com.github.pluralrocket.intellijpluginmk1.actions.BrowseNote\"
+                class="com.github.pluralrocket.intellijpluginmk1.actions.BrowseNote" text="BrowseNote"
+                description="Browse notes">
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+        </action>
+    </actions>
 </idea-plugin>
